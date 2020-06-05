@@ -13,23 +13,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    - name: Set up .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '3.1.102'
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: "3.1.102"
 
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
 
-    - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      - name: dotnet publish
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp ./BlazeApp/BlazeApp.csproj
 
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v1
-      with:
-        app-name: 'blazor-pwa-demo'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b02de8a170364406ba2c48f83aeffb0b }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v1
+        with:
+          app-name: "blazor-pwa-demo"
+          slot-name: "production"
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_b02de8a170364406ba2c48f83aeffb0b }}
+          package: ${{env.DOTNET_ROOT}}/myapp
