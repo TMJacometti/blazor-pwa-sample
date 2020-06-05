@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazeApp", "BlazeApp\BlazeApp.csproj", "{CBF10161-2593-44F4-807A-831CE82585A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBF10161-2593-44F4-807A-831CE82585A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF10161-2593-44F4-807A-831CE82585A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF10161-2593-44F4-807A-831CE82585A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF10161-2593-44F4-807A-831CE82585A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53D54F2D-B958-497F-936C-E621B0062125}
+	EndGlobalSection
+EndGlobal
